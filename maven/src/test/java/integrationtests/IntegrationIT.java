@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+// integration test to check the functioning of multiple modules
 public class IntegrationIT {
     private int valueFromAdditionClass;
     private int valueFromSubtractionClass;

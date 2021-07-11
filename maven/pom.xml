@@ -8,6 +8,7 @@
     <artifactId>maven</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- properties tag -->
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
@@ -19,8 +20,9 @@
         <property>browserFromCMD</property>
     </properties>
 
+    <!-- profiles tag -->
     <profiles>
-
+        <!-- profile - development phase-->
         <profile>
             <id>developmentPhase</id>
             <activation>
@@ -32,6 +34,7 @@
                 <mode.value>head</mode.value>
             </properties>
         </profile>
+        <!-- profile - production phase-->
         <profile>
             <id>productionPhase</id>
             <properties>
@@ -40,22 +43,25 @@
                 <mode.value>headless</mode.value>
             </properties>
         </profile>
-
     </profiles>
 
+    <!-- dependencies tag -->
     <dependencies>
+        <!-- selenium dependency - used for automation -->
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
+        <!-- web driver manager dependency - used to invoke the driver -->
         <!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>${webdriver.manager.version}</version>
         </dependency>
+        <!-- testng dependency - used for testing purposes -->
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
@@ -65,22 +71,24 @@
         </dependency>
     </dependencies>
 
+    <!-- build tag -->
     <build>
-
+        <!-- resources tag - used to locate the resources directory -->
         <resources>
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
         </resources>
-
+        <!-- plugins -->
         <plugins>
+            <!-- surefire plugin - used for recognizing the unit tests and execute them through maven CLI -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefire.version}</version>
             </plugin>
-
+            <!-- failsafe plugin - used for recognizing the integration tests and execute them through maven CLI -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
@@ -94,7 +102,8 @@
                     </execution>
                 </executions>
             </plugin>
-
+            <!-- build helper plugin - used to identify the tests other than default test directory -->
+            <!-- this project does not have the tests outside the default directory, so this plugin is not used -->
         </plugins>
     </build>
 

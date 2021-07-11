@@ -6,6 +6,8 @@ import org.testng.annotations.*;
 import pages.GoogleHomePage;
 import utils.BrowserSetup;
 
+
+// unit test to check whether the link text matches the actual given string
 public class TextVerificationTest {
     private WebDriver driver;
     private GoogleHomePage googleHomePage;

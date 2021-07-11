@@ -37,6 +37,7 @@ public class BrowserSetup {
 //    mvn -PdevelopmentPhase -Dtest=PageNavigatedTest test
 //    mvn -PproductionPhase test
 
+    // initializing the parameters
     public BrowserSetup() {
         browser = System.getProperty("browserFromCMD");
         url = "https://www.google.com";
@@ -48,6 +49,7 @@ public class BrowserSetup {
         }
     }
 
+    // returns the driver element
     public WebDriver browserInitialization() {
         boolean temp = browser.equalsIgnoreCase("chrome") ? true : false;
         (temp ? WebDriverManager.chromedriver() : WebDriverManager.firefoxdriver()).setup();

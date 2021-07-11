@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pages.GoogleHomePage;
 import utils.BrowserSetup;
 
+// unit test for checking if the page if navigated to the other page
 public class PageNavigatedTest {
     private WebDriver driver;
     private GoogleHomePage googleHomePage;

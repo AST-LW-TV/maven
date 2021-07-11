@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import pages.GoogleHomePage;
 import utils.BrowserSetup;
 
+// unit test to check whether the string passed into the input field is valid or not
 public class SearchStringValidationTest {
     private WebDriver driver;
     private GoogleHomePage googleHomePage;

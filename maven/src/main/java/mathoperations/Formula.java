@@ -1,5 +1,6 @@
 package mathoperations;
 
+// calculates the value based on the formula given
 public class Formula {
     private static int sum;
     private static int difference;

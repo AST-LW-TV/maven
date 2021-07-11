@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+// gets the details from properties file
 public class GetTheDetails {
     private static Properties prop = new Properties();
     private static FileInputStream file;
@@ -18,6 +19,7 @@ public class GetTheDetails {
         }
     }
 
+    // returns the value of that particular key passed
     public static String getValue(String key) {
         try {
             prop.load(file);
