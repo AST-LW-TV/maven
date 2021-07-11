@@ -121,3 +121,10 @@ Additional Task
 # executes IntegrationIT integration test
 mvn failsafe:integration-test failsafe:verify
 ```
+
+Resources 
+
+- [how to update a property file using maven or pom.xml](https://stackoverflow.com/questions/48259808/how-to-update-a-property-file-using-maven-or-pom-xml)
+- [Maven Profiles example](https://mkyong.com/maven/maven-profiles-example/)
+- [Guide to Maven Profiles](https://www.baeldung.com/maven-profiles)
+- [Using the properties tag within maven profiles](https://stackoverflow.com/questions/12068758/using-the-properties-tag-within-maven-profiles) 
