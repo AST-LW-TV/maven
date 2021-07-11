@@ -14,6 +14,7 @@ public class SearchStringValidationTest {
 
     @BeforeClass
     public void preConditions() {
+        System.out.println("Unit Test started");
         driver = new BrowserSetup().browserInitialization();
         googleHomePage = new GoogleHomePage(driver);
     }
@@ -27,5 +28,6 @@ public class SearchStringValidationTest {
     @AfterClass
     public void quitDriver() {
         driver.quit();
+        System.out.println("Unit Test Ended");
     }
 }

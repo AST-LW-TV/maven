@@ -12,6 +12,7 @@ public class TextVerificationTest {
 
     @BeforeClass
     public void preConditions() {
+        System.out.println("Unit Test started");
         driver = new BrowserSetup().browserInitialization();
         googleHomePage = new GoogleHomePage(driver);
     }
@@ -31,5 +32,6 @@ public class TextVerificationTest {
     @AfterClass
     public void quitDriver() {
         driver.quit();
+        System.out.println("Unit Test Ended");
     }
 }
