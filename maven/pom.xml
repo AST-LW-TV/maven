@@ -12,11 +12,13 @@
     <properties>
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
+        <!-- version number identifier tags -->
         <selenium.version>3.141.59</selenium.version>
         <webdriver.manager.version>4.4.3</webdriver.manager.version>
         <testng.version>7.4.0</testng.version>
         <surefire.version>3.0.0-M5</surefire.version>
         <failsafe.version>3.0.0-M5</failsafe.version>
+        <!-- property tag -->
         <property>browserFromCMD</property>
     </properties>
 
