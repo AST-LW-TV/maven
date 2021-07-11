@@ -3,7 +3,7 @@
 ## Project Description
 
 > 1. **Google HomePage Automation** 
-- In this project is used to understand the Unit Test Concept. 
+- This project is used to understand the Unit Test Concept. 
 -  *Unit Tests are written to test the individual functionality of the method / function*. 
 -  The test cases involve as follows, 
     -  **PageNavigatedTest** - This test is used to check whether the Home page is navigated to other page. 
@@ -25,36 +25,36 @@
 
 ### General maven commands 
 
-- to clean the project and removes all the files generated in previous build
+- To clean the project and removes all the files generated in previous build
 
 ```
 mvn clean 
 ```
 
-- to compile the prpoject 
+- To compile the prpoject 
 
 ```
 mvn compile 
 ```
 
-- to execute all the unit tests in test directory
+- To execute all the unit tests in test directory
 
 ```
 mvn test 
 ```
 
-- to execute particular unit test 
+- To execute particular unit test 
 
 ```
 mvn -Dtest=<name_of_the_test_file> test
 ```
 
-- to execute integration tests and unit tests together 
+- To execute integration tests and unit tests together 
 ```
 mvn verify
 ```
 
-- using failsafe maven plugin, we can run only integration tests
+- Using failsafe maven plugin, we can run only integration tests
 
 ```
 mvn failsafe:integration-test failsafe:verify 
@@ -62,29 +62,29 @@ mvn failsafe:integration-test failsafe:verify
 
 ### Commands used in this Project
 
-First Task - created a project with maven 
+First Task - Created a project with maven 
 
-Second Task - taking the properties from maven CLI
+Second Task - Taking the properties from maven CLI
 
-- property - browserFromCMD
+- Property - browserFromCMD
     - expected **value** - chrome or firefox
-- to execute single file unit test 
+- To execute single file unit test 
      - -Dtest=PageNavigatedTest
      - -Dtest=SearchStringValidationTest 
      - -Dtest=TextVerificationTest
     
 #### mvn commands
-  - to execute the test in chrome browser
+  - To execute the test in chrome browser
 ```
 mvn -DbrowserFromCMD=chrome test
 ```
 
-- to execute the test in firefox browser
+- To execute the test in firefox browser
 ```
 mvn -DbrowserFromCMD=firefox test
 ```
 
-- to execute individual test files 
+- To execute individual test files 
 ```
 mvn -DbrowserFromCMD=<value> -Dtest=PageNavigatedTest test
 
@@ -93,12 +93,12 @@ mvn -DbrowserFromCMD=<value> -Dtest=SearchStringValidationTest test
 mvn -DbrowserFromCMD=<value> -Dtest=TextVerificationTest test
 ```
 
-Third Task - using profile tag to separate development and production stage
+Third Task - Using profile tag to separate development and production stage
 
 #### mvn commands
 
 
-- to execute the development phase profile - runs in head mode and in chrome
+- To execute the development phase profile - runs in head mode and in chrome
 
 ```
 mvn -P developmentPhase test
@@ -107,7 +107,7 @@ mvn -P developmentPhase test
 mvn -P developmentPhase -Dtest=PageNavigatedTest test
 ```
 
-- to execute the production phase profile - runs in headless mode and in firefox 
+- To execute the production phase profile - runs in headless mode and in firefox 
 
 ```
 mvn -P productionPhase test
@@ -115,7 +115,7 @@ mvn -P productionPhase test
 
 Additional Task 
 
-- to execute the integration tasks 
+- To execute the integration tasks 
 
 ```
 # executes IntegrationIT integration test
@@ -124,7 +124,7 @@ mvn failsafe:integration-test failsafe:verify
 
 Resources 
 
-- [how to update a property file using maven or pom.xml](https://stackoverflow.com/questions/48259808/how-to-update-a-property-file-using-maven-or-pom-xml)
+- [How to update a property file using maven or pom.xml](https://stackoverflow.com/questions/48259808/how-to-update-a-property-file-using-maven-or-pom-xml)
 - [Maven Profiles example](https://mkyong.com/maven/maven-profiles-example/)
 - [Guide to Maven Profiles](https://www.baeldung.com/maven-profiles)
 - [Using the properties tag within maven profiles](https://stackoverflow.com/questions/12068758/using-the-properties-tag-within-maven-profiles) 
