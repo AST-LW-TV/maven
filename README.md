@@ -60,6 +60,14 @@ mvn verify
 mvn failsafe:integration-test failsafe:verify 
 ```
 
+### To Install the project
+
+```
+git clone https://github.com/AST-LW-TV/maven.git
+
+# open the project in IntelliJ Editor
+```
+
 ### Commands used in this Project
 
 First Task - Created a project with maven 
